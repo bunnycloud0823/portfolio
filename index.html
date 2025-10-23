@@ -2,9 +2,19 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0;url=whoami.html">
-  <script>window.location.replace('whoami.html');</script>
-  <title>Redirect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>강혜교 포트폴리오</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body></body>
+
+<body class="bg-white text-gray-800 flex items-center justify-center h-screen flex-col">
+  <h1 class="text-5xl font-extrabold text-indigo-600 mb-6">강혜교 포트폴리오</h1>
+  <p class="text-gray-600 text-lg">아래 버튼을 클릭해 포트폴리오를 탐색하세요.</p>
+
+  <div class="mt-8 flex space-x-6">
+    <a href="whoami.html" class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition">Who Am I</a>
+    <a href="selfintro.html" class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition">자소서</a>
+    <a href="projects.html" class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition">프로젝트</a>
+  </div>
+</body>
 </html>

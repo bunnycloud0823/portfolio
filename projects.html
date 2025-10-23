@@ -3,103 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>프로젝트 - 김미래 포트폴리오</title>
+  <title>프로젝트 - 강혜교 포트폴리오</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* JS 제어용 클래스 */
-    .dropdown-menu.show {
-      display: block !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-      transform: translateY(0);
-      pointer-events: auto !important;
-      position: absolute;
-      z-index: 9999;
-    }
+    html { scroll-behavior: smooth; }
+    body { padding-top: 4rem; }
   </style>
 </head>
 
 <body class="bg-white text-gray-800">
-    <div id="nav-placeholder"></div>
-    <script>
-      fetch("intro.html")
-        .then(res => res.text())
-        .then(html => {
-          document.getElementById("nav-placeholder").innerHTML = html;
-        });
-    </script>
+  <div id="nav-placeholder"></div>
+
+  <script>
+    fetch("./intro.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("nav-placeholder").innerHTML = html;
+      });
+  </script>
 
   <main class="pt-20 space-y-32">
     <section id="project1" class="min-h-screen flex flex-col items-center justify-center bg-white px-8 text-center">
       <h2 class="text-5xl font-extrabold text-indigo-600 mb-6">프로젝트 1. 고객 이탈 예측 모델 개발</h2>
       <p class="text-lg max-w-5xl text-gray-700 leading-relaxed">
-        온라인 쇼핑몰의 고객 이탈 현상을 사전에 감지하여 마케팅 전략을 최적화하기 위한 분류 모델을 구축했습니다.  
-        50,000명의 고객 로그 데이터를 기반으로 구매 빈도, 클릭 수, 장바구니 이력, CS 접수 기록 등 다차원 변수를 결합했습니다.  
-        <br><br>
-        주요 분석 결과, ‘최근 7일간 클릭 수 변화율’이 이탈 예측의 핵심 변수로 작용했습니다.  
-        이를 바탕으로 쿠폰 발송 시점 최적화를 통해 캠페인 효율이 17% 향상되었습니다.  
-        <br><br>
-        **기술 스택:** Python, Pandas, Scikit-learn, LightGBM, Optuna  
+        온라인 쇼핑몰 고객의 이탈을 예측하기 위한 분류 모델을 구축했습니다.<br>
         **성과:** AUC 0.91, 고객 유지율 78% → 86%
       </p>
     </section>
 
     <section id="project2" class="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-8 text-center">
-      <h2 class="text-5xl font-extrabold text-indigo-600 mb-6">프로젝트 2. 부동산 시계열 예측 및 시각화</h2>
+      <h2 class="text-5xl font-extrabold text-indigo-600 mb-6">프로젝트 2. 부동산 시계열 예측</h2>
       <p class="text-lg max-w-5xl text-gray-700 leading-relaxed">
-        국토교통부 실거래가 데이터를 기반으로 아파트 매매가 추세를 예측했습니다.  
-        Prophet과 LSTM을 결합한 하이브리드 모델로 중장기 예측 정확도를 개선했습니다.  
-        <br><br>
-        **핵심 기술:** Prophet, TensorFlow, Plotly  
-        **성과:** MAPE 4.8%, RMSE 0.039  
-        **활용:** 공공데이터 포털 예측 서비스 시범 적용
+        Prophet과 LSTM을 결합한 모델로 아파트 매매가 추세를 예측했습니다.<br>
+        **성과:** MAPE 4.8%, RMSE 0.039
       </p>
     </section>
 
     <section id="project3" class="min-h-screen flex flex-col items-center justify-center bg-white px-8 text-center">
-      <h2 class="text-5xl font-extrabold text-indigo-600 mb-6">프로젝트 3. SNS 감성 분석 및 키워드 트렌드</h2>
+      <h2 class="text-5xl font-extrabold text-indigo-600 mb-6">프로젝트 3. SNS 감성 분석</h2>
       <p class="text-lg max-w-5xl text-gray-700 leading-relaxed">
-        약 10만 건의 리뷰를 크롤링하여 KoBERT 기반 감성 분류 모델을 학습했습니다.  
-        긍정 키워드와 부정 키워드의 상관도를 시각화하여 브랜드 이미지 변화를 추적했습니다.  
-        <br><br>
-        **기술:** Python, PyTorch, KoBERT, Gensim  
-        **성과:** F1 0.93, 키워드 자동 군집화 97% 일치
+        KoBERT 모델을 활용하여 리뷰 데이터를 감성 분류 및 키워드 트렌드 분석을 수행했습니다.<br>
+        **성과:** F1 0.93
       </p>
     </section>
 
     <section id="project4" class="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-8 text-center">
-      <h2 class="text-5xl font-extrabold text-indigo-600 mb-6">프로젝트 4. 데이터 대시보드 자동화 시스템</h2>
+      <h2 class="text-5xl font-extrabold text-indigo-600 mb-6">프로젝트 4. 데이터 대시보드 자동화</h2>
       <p class="text-lg max-w-5xl text-gray-700 leading-relaxed">
-        Streamlit 기반 대시보드로 마케팅 데이터를 실시간으로 시각화하고,  
-        Google Sheets와 연동하여 주간 보고서를 자동 생성했습니다.  
-        <br><br>
-        **성과:** 보고서 작성 시간 80% 단축, 전사 공유 시스템 구축  
-        **기술:** Python, Plotly, Streamlit, Google API
+        Streamlit 기반의 대시보드를 개발하여 Google Sheets 데이터와 실시간 연동했습니다.<br>
+        **성과:** 보고서 작성 시간 80% 단축
       </p>
     </section>
   </main>
-
-  <script>
-    // === 프로젝트 메뉴 hover 제어 ===
-    const projectMenu = document.getElementById('project-menu');
-    const dropdown = projectMenu.querySelector('.dropdown-menu');
-    let hideTimer;
-
-    projectMenu.addEventListener('mouseenter', () => {
-      clearTimeout(hideTimer);
-      dropdown.classList.add('show');
-    });
-
-    projectMenu.addEventListener('mouseleave', () => {
-      hideTimer = setTimeout(() => {
-        dropdown.classList.remove('show');
-      }, 1000); // 1초 뒤 닫힘
-    });
-  </script>
 </body>
 </html>
